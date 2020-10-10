@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang= "en_US">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> level 1 </title>
+    </head>
+    <body>
+        <script>
+            var myScore, timeLeft, timerId;
+            myScore = 1;
+            timeLeft = 10;
+            timerId = setInterval(countdown, 1000);
+
+            function countdown() {
+                if (timeLeft == -1){
+                    clearTimeout(timerId);
+                    loseGame();
+                } else {
+                    document.getElementById("timer").innerHTML = timeLeft + " seconds remaining";
+                    timeLeft--;
+                }
+            }
+            function loseGame(){
+                window.open("overtime.html", "_top")
+            }
+            function myFunction() {
+            document.getElementById("score").innerHTML = myScore;
+            }
+        </script>
+        <h1 id="timer"></h1>
+        <p id="score"></p>
+        <h2> You are in a high bulding and an earthquake shook the building. What do you do? </h2>
+        <hr>
+        <a href="level2-1.html"> Secure all the costly items so they won't fall off. </a>
+        <hr>
+        <a href="level2-2.html"> Go near a window as the edges of a building is safer.</a>
+        <hr>
+        <a href="level2-3.html"> Find a hard surface to hide upon. </a>
+        <hr>
+        <a href="level2-4.html"> Drop, Cover and Hold. </a>
+        <hr>
+        <a href="level2-5.html"> Stay, do not run outside, and avoid doorways. </a>
+        <hr>
+        <a href="level2-6.html"> Help the old woman to get to safety. </a>
+        <hr>
+        <a href="level2-7.html"> Don't mind it, it's a normal occurrence.</a>
+        <hr>
+        <a href="level2-8.html"> Get out of the building. </a>
+        <hr>
+        <a href="level2-9.html"> Hide beside a table rather than underneath it. </a>
+        <hr>
+        <a href="level2-10.html"> Use the elevator to get out of the building fast. </a>
+        <hr>
+    </body>
+</html>
