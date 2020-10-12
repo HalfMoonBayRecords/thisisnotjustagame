@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang= "en_US">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> Level 2 </title>
+    </head>
+    <body>
+        <script>
+            var myScore, timeLeft, timerId;
+            myScore = 1;
+            timeLeft = 10;
+            timerId = setInterval(countdown, 1000);
+
+            function countdown() {
+                if (timeLeft == -1){
+                    clearTimeout(timerId);
+                    loseGame();
+                } else {
+                    document.getElementById("timer").innerHTML = timeLeft + " seconds remaining";
+                    timeLeft--;
+                }
+            }
+            function loseGame(){
+                window.open("overtime.html", "_top")
+            }
+            function myFunction() {
+            document.getElementById("score").innerHTML = myScore;
+            }
+        </script>
+        <h1 id="timer"></h1>
+        <p id="score"></p>
+        <h2> What do you want to open? </h2>
+        <hr> 
+        <a href="level4-31.html"> Messages </a>
+        <hr>
+        <a href="level4-32.html"> Youtube </a>
+        <hr>
+        <a href="level4-33.html"> Twitter </a>
+        <hr>
+        <a href="level4-34.html"> Facebook</a>
+        <hr>
+        <a href="level4-35.html"> Safari </a>
+        <hr>
+        <a href="level4-36.html"> Call Of Duty Mobile</a>
+        <hr>
+        <a href="level4-37.html"> </a>
+        <hr>
+        <a href="level4-38.html">  </a>
+        <hr>
+        <a href="level4-39.html"> </a>
+        <hr>
+        <a href="level4-40.html"> </a>
+        <hr>
+    </body>
+</html>

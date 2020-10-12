@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang= "en_US">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> Level 3 </title>
+    </head>
+    <body>
+        <script>
+            var myScore, timeLeft, timerId;
+            myScore = 1;
+            timeLeft = 10;
+            timerId = setInterval(countdown, 1000);
+
+            function countdown() {
+                if (timeLeft == -1){
+                    clearTimeout(timerId);
+                    loseGame();
+                } else {
+                    document.getElementById("timer").innerHTML = timeLeft + " seconds remaining";
+                    timeLeft--;
+                }
+            }
+            function loseGame(){
+                window.open("overtime.html", "_top")
+            }
+            function myFunction() {
+            document.getElementById("score").innerHTML = myScore;
+            }
+        </script>
+        <h1 id="timer"></h1>
+        <p id="score"></p>
+        <h2> Question </h2>
+        <hr> 
+        <a href="level4-41.html"> Option 1 </a>
+        <hr>
+        <a href="level4-42.html"> Option 2</a>
+        <hr>
+        <a href="level4-43.html"> Option 3  </a>
+        <hr>
+        <a href="level4-44.html"> Option 4 </a>
+        <hr>
+        <a href="level4-45.html"> Option 5 </a>
+        <hr>
+        <a href="level4-46.html"> Option 6 </a>
+        <hr>
+        <a href="level4-47.html"> Option 7 </a>
+        <hr>
+        <a href="level4-48.html"> Option 8 </a>
+        <hr>
+        <a href="level4-49.html"> Option 9 </a>
+        <hr>
+        <a href="level4-50.html"> Option 10 </a>
+        <hr>
+    </body>
+</html>
