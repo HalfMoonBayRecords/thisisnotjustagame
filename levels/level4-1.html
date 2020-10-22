@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang= "en_US">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> Level 4 </title>
+    </head>
+    <body>
+        <script>
+            var myScore, timeLeft, timerId;
+            myScore = 1;
+            timeLeft = 10;
+            timerId = setInterval(countdown, 1000);
+
+            function countdown() {
+                if (timeLeft == -1){
+                    clearTimeout(timerId);
+                    loseGame();
+                } else {
+                    document.getElementById("timer").innerHTML = timeLeft + " seconds remaining";
+                    timeLeft--;
+                }
+            }
+            function loseGame(){
+                window.open("overtime.html", "_top")
+            }
+            function myFunction() {
+            document.getElementById("score").innerHTML = myScore;
+            }
+        </script>
+        <h1 id="timer"></h1>
+        <p id="score"></p>
+        <h2> You were found by the rescuers. You are now free and partially healed. </h2>
+        <hr>
+        <a href="level5-1.html"> Help the other trapped people. </a> <!-- Right -->
+        <hr>
+        <a href="level5-2.html"> </a> <!-- Wrong -->
+        <hr>
+        <a href="level5-3.html"> </a> <!-- Wrong -->
+        <hr>
+        <a href="level5-4.html"> </a> <!-- Wrong -->
+        <hr>
+        <a href="level5-5.html"> </a> <!-- Right-->
+        <hr>
+        <a href="level5-6.html"> </a> <!-- Wrong -->
+        <hr>
+        <a href="level5-7.html"> </a> <!-- Wrong -->
+        <hr>
+        <a href="level5-8.html"> </a> <!-- Wrong -->
+        <hr>
+        <a href="level5-9.html"> </a> <!-- Wrong -->
+        <hr>
+        <a href="level5-10.html"> </a> <!-- Right -->
+        <hr>
+    </body>
+</html>
