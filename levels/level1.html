@@ -29,6 +29,29 @@
         </script>
         <h1 id="timer"></h1>
         <p id="score"></p>
+        
+        <div class="w3-light-grey">
+            <div id="myBar" class="w3-container w3-green" style="height:24px;width:1%"></div>
+          </div>
+          
+          <button class="w3-button w3-light-grey" onclick="move()">Click Me</button>
+          
+          <script>
+          function move() {
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 100) {
+                clearInterval(id);
+              } else {
+                width++;
+                elem.style.width = width + '%';
+              }
+            }
+          }
+          </script>
+
         <h2> You are in a high bulding and an earthquake shook the building. What do you do? </h2>
         <hr>
         <a href="level2-1.html"> Secure all the costly items in the shelf so they won't fall off. </a> <!-- Right -->
