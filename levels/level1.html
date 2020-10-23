@@ -8,7 +8,7 @@
         <script>
             var myScore, timeLeft, timerId;
             myScore = 1;
-            timeLeft = 10;
+            timeLeft = 20;
             timerId = setInterval(countdown, 1000);
 
             function countdown() {
@@ -30,22 +30,6 @@
         <h1 id="timer"></h1>
         <p id="score"></p>
         
-          <script>
-          function move() {
-            var elem = document.getElementById("myBar");
-            var width = 1;
-            var id = setInterval(frame, 10);
-            function frame() {
-              if (width >= 100) {
-                clearInterval(id);
-              } else {
-                width++;
-                elem.style.width = width + '%';
-              }
-            }
-          }
-          </script>
-
         <h2> You are in a high bulding and an earthquake shook the building. What do you do? </h2>
         <hr>
         <a href="level2-1.html"> Secure all the costly items in the shelf so they won't fall off. </a> <!-- Right -->
