@@ -8,7 +8,7 @@
         <script>
             var myScore, timeLeft, timerId;
             myScore = 1;
-            timeLeft = 10;
+            timeLeft = 20;
             timerId = setInterval(countdown, 1000);
 
             function countdown() {
@@ -30,12 +30,6 @@
         <h1 id="timer"></h1>
         <p id="score"></p>
         
-        <div class="w3-light-grey">
-            <div id="myBar" class="w3-container w3-green" style="height:24px;width:1%"></div>
-          </div>
-          
-          <button class="w3-button w3-light-grey" onclick="move()">Click Me</button>
-          
           <script>
           function move() {
             var elem = document.getElementById("myBar");
