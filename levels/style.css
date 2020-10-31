@@ -1,7 +1,94 @@
 body {
-    background-color: ghostwhite;
+    background-color: black;
 }
-  a, h1, h2, h3, h4, h5, p {
-    color: black;font-family:'Courier New';
+
+h1, h2, h3, h4, h4, h5, h6, p, form, a {
+    font-family: 'Courier New', Courier, monospace ;
+    color: rgba(60, 250, 170, 5);
 }
-  
+
+p {
+    font-size: large;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid rgba(60, 250, 170, 5);
+    background-color: black;
+    color: rgba(60, 250, 170, 5);
+}
+
+input[type=submit] {
+    border:none;
+    border-bottom: rgba(60, 250, 170, 5);
+    color: rgba(60, 250, 170, 5);
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button {
+    font: bold 11px 'Arial';
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid lightgray;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid lightgray;
+    margin: auto;
+}
+
+.container {
+    height: 100px;
+    position: relative;
+    border: 3px solid black;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.blink {
+	-webkit-animation: blink .75s linear infinite;
+	-moz-animation: blink .75s linear infinite;
+	-ms-animation: blink .75s linear infinite;
+	-o-animation: blink .75s linear infinite;
+	 animation: blink .75s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
