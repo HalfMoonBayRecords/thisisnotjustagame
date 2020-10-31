@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html lang= "en_US">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> Level 1 </title>
+    </head>
+    <body>
+        <script>
+            var myScore, timeLeft, timerId;
+            myScore = 1;
+            timeLeft = 20;
+            timerId = setInterval(countdown, 2000);
+
+            function countdown() {
+                if (timeLeft == -1){
+                    clearTimeout(timerId);
+                    loseGame();
+                } else {
+                    timeLeft--;
+                    move();
+                }
+            function move() {
+                var i = 20;
+                if (i == 20) {
+                    var elem, width, id;
+                    i = 1;
+                    elem = document.getElementById("gameBar");
+                    width = 1;
+                    id = setInterval(frame, 400);
+                    function frame() {
+                        if (width >= 400) {
+                        clearInterval(id);
+                        i = 0;
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
+                }
+            }
+        }
+    }
+            function loseGame(){
+                window.open("overtime.html", "_top")
+            }
+            function myFunction() {
+            document.getElementById("score").innerHTML = myScore;
+            }
+        </script>
+        <div id="gameProgress">
+            <div id="gameBar"></div>
+        </div>
+        <h2> You are in a high building and an earthquake shook the building. What do you do? </h2>
+        <hr>
+        <a href="level2-1.html"> Secure all the costly items in the shelf so they won't fall off. </a> 
+        <hr>
+        <a href="level2-2.html"> Go near a window as the edges of a building is safer.</a>
+        <hr>
+        <a href="level2-3.html"> Find a hard surface to hide upon. </a> 
+        <hr>
+        <a href="level2-4.html"> Drop, Cover and Hold. </a>
+        <hr>
+        <a href="level2-5.html"> Stay, do not run outside, and avoid doorways. </a> 
+        <hr>
+        <a href="level2-6.html"> Help the old woman to get to safety. </a> 
+        <hr>
+        <a href="level2-7.html"> Don't mind it, it's a normal occurrence.</a> 
+        <hr>
+        <a href="level2-8.html"> Get out of the building. </a> 
+        <hr>
+        <a href="level2-9.html"> Hide beside the table. </a> 
+        <hr>
+        <a href="level2-10.html"> Run to the elevator to get out of the building fast. </a> 
+        <hr>
+    </body>
+</html>
