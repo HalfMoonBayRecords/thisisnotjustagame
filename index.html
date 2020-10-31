@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title> Disaster Management Text Game </title>
+        <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+        <script>
+          Pusher.logToConsole = true;
+      
+          var pusher = new Pusher('8ed2b13bc132bb35ebd7', {
+            cluster: 'ap1'
+          });
+      
+          var channel = pusher.subscribe('my-channel');
+          channel.bind('my-event', function(data) {
+            alert(JSON.stringify(data));
+          });
+        </script>
+    </head>
+    <body>
+        <form autocomplete="off" action="roles.js" onsubmit="return validateForm()">
+            <h1> Disaster Management Text Game. </h1>
+            <h2 class="blink"> Register Now! </h2>
+            <p> Please type your name properly. </p>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <input type="submit" value="Register"> 
+            <p> This is made by Group 2. </p>
+            <p> This is not just a game. </p>
+            <a href="credits.html"> Credits.</a>
+        </form>
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["fname"].value;
+                if (x == "") {
+                    alert ("Name must be filled out");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
