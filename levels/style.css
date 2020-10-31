@@ -92,3 +92,14 @@ input[type=submit] {
 	50.01% { opacity: 0; }
 	100% { opacity: 0; }
 }
+
+#gameProgress {
+    width: 100%;
+    color: black;
+}
+  
+#gameBar {
+    width: 1%;
+    height: 20px;
+    background-color: rgba(60, 250, 170, 5);
+  }
