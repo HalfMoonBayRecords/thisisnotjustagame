@@ -9,17 +9,36 @@
             var myScore, timeLeft, timerId;
             myScore = 1;
             timeLeft = 20;
-            timerId = setInterval(countdown, 1000);
+            timerId = setInterval(countdown, 2000);
 
             function countdown() {
                 if (timeLeft == -1){
                     clearTimeout(timerId);
                     loseGame();
                 } else {
-                    document.getElementById("timer").innerHTML = timeLeft + " seconds remaining";
                     timeLeft--;
+                    move();
+                }
+            function move() {
+                var i = 20;
+                if (i == 20) {
+                    var elem, width, id;
+                    i = 1;
+                    elem = document.getElementById("gameBar");
+                    width = 1;
+                    id = setInterval(frame, 100);
+                    function frame() {
+                        if (width >= 100) {
+                        clearInterval(id);
+                        i = 0;
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
                 }
             }
+        }
+    }
             function loseGame(){
                 window.open("overtime.html", "_top")
             }
@@ -27,30 +46,30 @@
             document.getElementById("score").innerHTML = myScore;
             }
         </script>
-        <h1 id="timer"></h1>
-        <p id="score"></p>
-        
+        <div id="gameProgress">
+            <div id="gameBar"></div>
+        </div>
         <h2> You are in a high bulding and an earthquake shook the building. What do you do? </h2>
         <hr>
-        <a href="level2-1.html"> Secure all the costly items in the shelf so they won't fall off. </a> <!-- Right -->
+        <a href="level2-1.html"> Secure all the costly items in the shelf so they won't fall off. </a> 
         <hr>
-        <a href="level2-2.html"> Go near a window as the edges of a building is safer.</a> <!-- Wrong -->
+        <a href="level2-2.html"> Go near a window as the edges of a building is safer.</a>
         <hr>
-        <a href="level2-3.html"> Find a hard surface to hide upon. </a> <!-- Right-->
+        <a href="level2-3.html"> Find a hard surface to hide upon. </a> 
         <hr>
-        <a href="level2-4.html"> Drop, Cover and Hold. </a> <!-- Right -->
+        <a href="level2-4.html"> Drop, Cover and Hold. </a>
         <hr>
-        <a href="level2-5.html"> Stay, do not run outside, and avoid doorways. </a> <!-- Right-->
+        <a href="level2-5.html"> Stay, do not run outside, and avoid doorways. </a> 
         <hr>
-        <a href="level2-6.html"> Help the old woman to get to safety. </a> <!-- Right -->
+        <a href="level2-6.html"> Help the old woman to get to safety. </a> 
         <hr>
-        <a href="level2-7.html"> Don't mind it, it's a normal occurrence.</a> <!-- Right -->
+        <a href="level2-7.html"> Don't mind it, it's a normal occurrence.</a> 
         <hr>
-        <a href="level2-8.html"> Get out of the building. </a> <!-- Right -->
+        <a href="level2-8.html"> Get out of the building. </a> 
         <hr>
-        <a href="level2-9.html"> Hide beside the table. </a> <!-- Right -->
+        <a href="level2-9.html"> Hide beside the table. </a> 
         <hr>
-        <a href="level2-10.html"> Run to the elevator to get out of the building fast. </a> <!-- Right -->
+        <a href="level2-10.html"> Run to the elevator to get out of the building fast. </a> 
         <hr>
     </body>
 </html>
