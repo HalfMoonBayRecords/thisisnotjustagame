@@ -55,7 +55,7 @@ input[type=submit] {
     font-size: 25px;
 }
 
-.blink, hr {
+.blink {
 	-webkit-animation: blink .75s linear infinite;
 	-moz-animation: blink .75s linear infinite;
 	-ms-animation: blink .75s linear infinite;
