@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Roles </title>
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title> Player </title>
         <link rel="stylesheet" href="style.css">
-        <?php 
-        $fname = "";
-        $lname = "";
-        ?>
     </head>
     <body>
-        <h1>
-            Hello <?php echo $_POST["fname, lname"]; ?><br>
-        </h1>
-        <p>
-            Go to the game.
-        </p>
-        <a href="admin.html"> Lobby </a>
+        <script>
+            function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+            var fname, lname;
+            fname = getParameterByName('fname');
+            lname = getParameterByName('lname');
+            if (fname == "Administrator", lname == "01") {
+                setAdmin();
+            } else {
+                setPlayer();
+            }
+            function setAdmin() {
+                window.open("admin.html", "_top");
+            }
+            function setPlayer() {
+                window.open("lobby.html", "_top");
+            }
+        </script>
     </body>
 </html>
